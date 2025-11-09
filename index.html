@@ -1,255 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swet Patel - Backend Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-in-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' }
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' }
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swet Patel - Backend Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            "fade-in": "fadeIn 0.6s ease-in-out",
+            "slide-up": "slideUp 0.8s ease-out",
+            float: "float 6s ease-in-out infinite",
+          },
+          keyframes: {
+            fadeIn: {
+              "0%": { opacity: "0" },
+              "100%": { opacity: "1" },
+            },
+            slideUp: {
+              "0%": { opacity: "0", transform: "translateY(30px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+            float: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-20px)" },
+            },
+          },
+        },
+      },
+    };
+  </script>
 </head>
+
 <body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen text-white">
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-6xl mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                    Swet Patel
-                </h1>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="hover:text-blue-400 transition-colors duration-300">Home</a>
-                    <a href="#about" class="hover:text-blue-400 transition-colors duration-300">About</a>
-                    <a href="#skills" class="hover:text-blue-400 transition-colors duration-300">Skills</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors duration-300">Projects</a>
-                    <a href="#contact" class="hover:text-blue-400 transition-colors duration-300">Contact</a>
-                </div>
-                <button id="mobile-menu-btn" class="md:hidden p-2">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <div class="flex flex-col space-y-2">
-                    <a href="#home" class="hover:text-blue-400 transition-colors duration-300">Home</a>
-                    <a href="#about" class="hover:text-blue-400 transition-colors duration-300">About</a>
-                    <a href="#skills" class="hover:text-blue-400 transition-colors duration-300">Skills</a>
-                    <a href="#projects" class="hover:text-blue-400 transition-colors duration-300">Projects</a>
-                    <a href="#contact" class="hover:text-blue-400 transition-colors duration-300">Contact</a>
-                </div>
-            </div>
+  <!-- Navigation -->
+  <nav class="fixed w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4">
+      <div class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          Swet Patel
+        </h1>
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-blue-400 transition-colors duration-300">Home</a>
+          <a href="#about" class="hover:text-blue-400 transition-colors duration-300">About</a>
+          <a href="#skills" class="hover:text-blue-400 transition-colors duration-300">Skills</a>
+          <a href="#projects" class="hover:text-blue-400 transition-colors duration-300">Projects</a>
+          <a href="#contact" class="hover:text-blue-400 transition-colors duration-300">Contact</a>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center pt-20">
-        <div class="max-w-6xl mx-auto px-6 text-center">
-            <div class="animate-slide-up">
-                <div class="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center animate-float">
-                    <i data-lucide="code" class="w-16 h-16 text-white"></i>
-                </div>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                    <span class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Backend Developer
-                    </span>
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                    Passionate about building scalable server-side applications and RESTful APIs with clean, maintainable code
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#projects" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
-                        View Projects
-                    </a>
-                    <a href="#contact" class="border-2 border-white/20 hover:border-white/40 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10">
-                        Get In Touch
-                    </a>
-                </div>
-            </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+        <div class="flex flex-col space-y-2">
+          <a href="#home" class="hover:text-blue-400 transition-colors duration-300">Home</a>
+          <a href="#about" class="hover:text-blue-400 transition-colors duration-300">About</a>
+          <a href="#skills" class="hover:text-blue-400 transition-colors duration-300">Skills</a>
+          <a href="#projects" class="hover:text-blue-400 transition-colors duration-300">Projects</a>
+          <a href="#contact" class="hover:text-blue-400 transition-colors duration-300">Contact</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                About Me
-            </h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-6">
-                    <p class="text-lg text-gray-300 leading-relaxed">
-                        I'm a motivated and detail-oriented Information Technology graduate with hands-on experience in backend development. 
-                        I specialize in building scalable server-side applications using Node.js, Express.js, and MongoDB.
-                    </p>
-                    <p class="text-lg text-gray-300 leading-relaxed">
-                        With a strong foundation in problem-solving and a passion for emerging technologies, I'm eager to contribute 
-                        to innovative projects while expanding my expertise in full-stack development.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-6">
-                        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                            <h3 class="font-semibold text-blue-400 mb-2">Education</h3>
-                            <p class="text-sm text-gray-300">BSc IT - CGPA 8.92</p>
-                            <p class="text-xs text-gray-400">Lords Universal College</p>
-                        </div>
-                        <div class="bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10">
-                            <h3 class="font-semibold text-purple-400 mb-2">Location</h3>
-                            <p class="text-sm text-gray-300">Mumbai, India</p>
-                            <p class="text-xs text-gray-400">Available for remote work</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                    <h3 class="text-2xl font-bold mb-6 text-center">Personal Info</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="calendar" class="w-5 h-5 text-blue-400"></i>
-                            <span class="text-gray-300">Born: March 9, 2005</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="languages" class="w-5 h-5 text-purple-400"></i>
-                            <span class="text-gray-300">Hindi, Gujarati, English, Marathi</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="heart" class="w-5 h-5 text-pink-400"></i>
-                            <span class="text-gray-300">Sports, Travel, Music</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <div class="animate-slide-up">
+        <div
+          class="w-32 h-32 mx-auto mb-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center animate-float">
+          <i data-lucide="code" class="w-16 h-16 text-white"></i>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-black/20">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Technical Skills
-            </h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Skills cards same as before -->
-                <!-- Keeping full skill section identical -->
-                <div class="bg-gradient-to-br from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="code" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Frontend</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">HTML5</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">CSS3</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">JavaScript</span>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="server" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Backend</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Express.js</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">RESTful APIs</span>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="database" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Database</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">NoSQL</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Database Design</span>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-orange-500/10 to-red-500/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="shield" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Security</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">JWT</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Authentication</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Authorization</span>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="git-branch" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Version Control</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Git</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">GitHub</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Collaboration</span>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="cloud" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Deployment</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Vercel</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">Cloud Services</span>
-                        <span class="bg-white/10 px-3 py-1 rounded-full text-sm">DevOps</span>
-                    </div>
-                </div>
-            </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">
+          <span
+            class="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Backend
+            Developer</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          Passionate about building scalable server-side applications and RESTful APIs with clean, maintainable code
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#projects"
+            class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+            View Projects
+          </a>
+          <a href="#contact"
+            class="border-2 border-white/20 hover:border-white/40 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-white/10">
+            Get In Touch
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Featured Projects
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Blog -->
-                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Blog Application</h3>
-                    <p class="text-gray-300 mb-4">A full-featured blogging platform with user management, CRUD operations for posts, and secure authentication with protected routes.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Express.js</span>
-                        <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
-                        <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm">JWT</span>
-                    </div>
-                    <a href="https://blog-space-1.onrender.com" target="_blank" class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-6 py-2 rounded-full font-semibold transition-all duration-300">Live Demo</a>
-                </div>
+  <!-- About -->
+  <section id="about" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        About Me
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <p class="text-lg text-gray-300 leading-relaxed">
+            I'm a motivated and detail-oriented Information Technology graduate with hands-on experience in backend
+            development. I specialize in building scalable server-side applications using Node.js, Express.js, and
+            MongoDB.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            With a strong foundation in problem-solving and a passion for emerging technologies, I'm eager to contribute
+            to innovative projects while expanding my expertise in full-stack development.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Expense Tracker -->
-                <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
-                    <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="shopping-cart" class="w-6 h-6 text-white"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Expense Tracker</h3>
-                    <p class="text-gray-300 mb-4">A secure expense tracker web app with JWT authentication, bcrypt-hashed passwords, and role-based access control for managing incomes and expenses.</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-500/20 text-blue-300 px
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-black/20">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Technical Skills
+      </h2>
+      <p class="text-gray-300 text-lg max-w-3xl mx-auto mb-12">
+        Experienced in designing, developing, and deploying backend systems using modern web technologies and best
+        practices for scalability and performance.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2
+        class="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Featured Projects
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Blog Application -->
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="book-open" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Blog Application</h3>
+          <p class="text-gray-300 mb-4">
+            A full-stack blogging platform that allows users to create, edit, and manage posts. Includes JWT-based
+            authentication, secure login, and CRUD operations for posts.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Node.js</span>
+            <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Express.js</span>
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
+            <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm">JWT</span>
+          </div>
+          <a href="https://blog-space-1.onrender.com" target="_blank"
+            class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-6 py-2 rounded-full font-semibold transition-all duration-300">
+            Live Demo
+          </a>
+        </div>
+
+        <!-- Expense Tracker -->
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="shopping-cart" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Expense Tracker</h3>
+          <p class="text-gray-300 mb-4">
+            A secure and user-friendly expense tracker web app to manage income and expenses. Features include user
+            authentication, data visualization, and category-based insights.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Node.js</span>
+            <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Express.js</span>
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
+            <span class="bg-pink-500/20 text-pink-300 px-3 py-1 rounded-full text-sm">JWT</span>
+          </div>
+          <a href="https://expense-tracker-r5mj.onrender.com" target="_blank"
+            class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-6 py-2 rounded-full font-semibold transition-all duration-300">
+            Live Demo
+          </a>
+        </div>
+
+        <!-- Inventory Management -->
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="boxes" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Inventory Management System</h3>
+          <p class="text-gray-300 mb-4">
+            A comprehensive inventory management system that enables users to manage stock, products, and transactions
+            efficiently. Includes CRUD operations, authentication, and real-time updates.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Node.js</span>
+            <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Express.js</span>
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
+            <span class="bg-cyan-500/20 text-cyan-300 px-3 py-1 rounded-full text-sm">REST API</span>
+          </div>
+          <a href="https://inventory-management-thsr.onrender.com" target="_blank"
+            class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-6 py-2 rounded-full font-semibold transition-all duration-300">
+            Live Demo
+          </a>
+        </div>
+
+        <!-- Task Management System -->
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:scale-105 transition-transform duration-300">
+          <div
+            class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+            <i data-lucide="clipboard-list" class="w-6 h-6 text-white"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Task Management System</h3>
+          <p class="text-gray-300 mb-4">
+            A task management platform that allows users to organize, track, and manage tasks efficiently. Features
+            include authentication, task status tracking, and user-specific dashboards.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm">Node.js</span>
+            <span class="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm">Express.js</span>
+            <span class="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm">MongoDB</span>
+            <span class="bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full text-sm">RBAC</span>
+          </div>
+          <a href="https://task-manager-gkuo.onrender.com" target="_blank"
+            class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-6 py-2 rounded-full font-semibold transition-all duration-300">
+            Live Demo
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-black/20">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2
+        class="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        Let's Connect
+      </h2>
+      <p class="text-xl text-gray-300 mb-12">
+        Ready to collaborate on exciting projects? Let's build something amazing together!
+      </p>
+      <a href="mailto:swetp392@gmail.com"
+        class="inline-block bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+        Email Me
+      </a>
+    </div>
+  </section>
+
+  <footer class="py-8 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-gray-400">
+        © 2025 Swet Patel. Built with passion using HTML, Tailwind CSS, and JavaScript.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+  </script>
+</body>
+</html>
